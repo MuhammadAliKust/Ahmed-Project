@@ -4,8 +4,6 @@ void main() {
   runApp(const MyApp());
 }
 
-///Widget -> Set of Code that build UI
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -58,7 +56,30 @@ class MyApp extends StatelessWidget {
                   style: TextStyle(fontSize: 30),
                 ),
                 SizedBox(
-                  height: 100,
+                  height: 10,
+                ),
+                Text("Second Text"),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Icon(Icons.add),
+                    Column(
+                      children: [
+                        Icon(Icons.share),
+                        Row(
+                          children: [
+                            Icon(Icons.share),
+                            Icon(Icons.share),
+                          ],
+                        ),
+                        Icon(Icons.share),
+                      ],
+                    ),
+                    Icon(Icons.comment)
+                  ],
                 )
               ],
             ),
