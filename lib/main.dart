@@ -48,42 +48,15 @@ class MyApp extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          body: SingleChildScrollView(
-            child: Column(
-              children: [
-                Text(
-                  "First Text",
-                  style: TextStyle(fontSize: 30),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Text("Second Text"),
-                SizedBox(
-                  height: 20,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Icon(Icons.add),
-                    Column(
-                      children: [
-                        Icon(Icons.share),
-                        Row(
-                          children: [
-                            Icon(Icons.share),
-                            Icon(Icons.share),
-                          ],
-                        ),
-                        Icon(Icons.share),
-                      ],
-                    ),
-                    Icon(Icons.comment)
-                  ],
-                )
-              ],
+          body:Column(children: [
+            Image.network(
+              'https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg',
+              height: 100,
+              width: 30,
             ),
-          )),
+            SizedBox(height: 20,),
+            Image.asset('assets/images/1.png')
+          ],)),
     );
   }
 }
