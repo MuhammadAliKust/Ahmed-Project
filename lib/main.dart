@@ -11,52 +11,41 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.blue,
-            title: const Text(
-              "First Screen",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold),
-            ),
-            centerTitle: true,
-            leading: const Icon(
-              Icons.arrow_back_ios,
-              color: Colors.white,
-            ),
-            actions: [
-              const Icon(
-                Icons.notifications,
-                color: Colors.white,
-              ),
-              const Icon(
-                Icons.shopping_cart,
-                color: Colors.white,
-              ),
-              const Icon(
-                Icons.person,
-                color: Colors.white,
-              ),
-            ],
+        appBar: AppBar(
+          backgroundColor: Colors.blue,
+          leading: Icon(
+            Icons.arrow_back_ios,
+            size: 17,
           ),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {},
-            backgroundColor: Colors.blue,
-            child: const Icon(
-              Icons.add,
-              color: Colors.white,
+          title: Text("Posts"),
+          centerTitle: true,
+          actions: [
+            Icon(Icons.shopping_cart),
+            Icon(Icons.notifications),
+          ],
+        ),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image.asset('assets/images/1.png'),
+            Text(
+              "What is Lorem Ipsum?",
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-          ),
-          body:Column(children: [
-            Image.network(
-              'https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg',
-              height: 100,
-              width: 30,
-            ),
-            SizedBox(height: 20,),
-            Image.asset('assets/images/1.png')
-          ],)),
+            Text(
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Icon(Icons.add),
+                Icon(Icons.add),
+                Icon(Icons.add),
+                Icon(Icons.add),
+              ],
+            )
+          ],
+        ),
+      ),
     );
   }
 }
