@@ -21,7 +21,6 @@ class LoginView extends StatelessWidget {
             height: 10,
           ),
           TextField(
-            controller: emailController,
             decoration: InputDecoration(
               label: Text("Email"),
               hintText: 'test@gmail.com',
@@ -35,7 +34,7 @@ class LoginView extends StatelessWidget {
               focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.yellow, width: 3)),
               disabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.yellow, width: 3)),
+                  borderSide: BorderSide(color: Colors.red, width: 3)),
             ),
           ),
           SizedBox(
